@@ -6,8 +6,8 @@ import pageobjects.HomePage;
 import pageobjects.LoginPage;
 import testcomponents.BaseTest;
 public  class LoginTest extends BaseTest  {
-	
-	
+
+
 
 	@Test
 	public void LoginPageTest()
@@ -22,8 +22,8 @@ public  class LoginTest extends BaseTest  {
 		reload();
 		SuccessMessage("Account Logout");
 		hp.clickContinue();
-		
+
 	}
-	
-	
+
+
 }

@@ -4,26 +4,15 @@
   <listeners>
     <listener class-name="testcomponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Registration Test(failed)">
+  <test thread-count="5" name="WishList Test(failed)">
     <classes>
-      <class name="tests.RegistrationTest">
+      <class name="tests.WishListTest">
         <methods>
           <include name="launchApplication"/>
-          <include name="tearDown"/>
-          <include name="Registration"/>
-        </methods>
-      </class> <!-- tests.RegistrationTest -->
-    </classes>
-  </test> <!-- Registration Test(failed) -->
-  <test thread-count="5" name="Login Test(failed)">
-    <classes>
-      <class name="tests.LoginTest">
-        <methods>
-          <include name="LoginPageTest"/>
-          <include name="launchApplication"/>
+          <include name="wishlist"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.WishListTest -->
     </classes>
-  </test> <!-- Login Test(failed) -->
+  </test> <!-- WishList Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

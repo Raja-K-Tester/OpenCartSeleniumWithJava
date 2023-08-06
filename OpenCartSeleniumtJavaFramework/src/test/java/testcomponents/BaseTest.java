@@ -2,6 +2,7 @@ package testcomponents;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -17,11 +18,11 @@ import pageobjects.HomePage;
 
 
 public class BaseTest extends BrowserInit{
-	
+
 	public WebDriver driver;
 	public HomePage homepage;
-	
-	
+
+
 	public String getScreenshot(String testCaseName,WebDriver driver)
 	{
 		TakesScreenshot ts=(TakesScreenshot)driver;
@@ -35,7 +36,7 @@ public class BaseTest extends BrowserInit{
 		}
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
-	
+
 	public String getElementScreenshot(String testCaseName,WebDriver driver)
 	{
 		WebElement text=driver.findElement(By.xpath("//p[contains(text(),'Thank you for purchasing')]"));
@@ -48,14 +49,14 @@ public class BaseTest extends BrowserInit{
 			e.printStackTrace();
 		}
 		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
-		
+
 	}
 	public void reload()
 	{
 		driver.navigate().refresh();
-		
+
 	}
-	
+
 	public void fileupload()
 	{
 		try {
@@ -76,7 +77,7 @@ public class BaseTest extends BrowserInit{
 		}
 		driver.switchTo().alert().dismiss();
 	}
-	
+
 	public void clickContactUsPage()
 	{
 		//Header Contact Link
@@ -93,14 +94,14 @@ public class BaseTest extends BrowserInit{
 		Assert.assertEquals(emailmsg,"E-Mail Address does not appear to be valid!");
 		Assert.assertEquals(enqmsg,"Enquiry must be between 10 and 3000 characters!");
 	}
-	
+
 	 public void SuccessMessage(String message) {
 	        boolean pageSource = driver.getPageSource().contains(message);
 	        Assert.assertTrue(pageSource);
 	    }
-	 
-	
-	
+
+
+
 	@BeforeMethod(alwaysRun = true)
 	public void launchApplication()
 	{
@@ -110,16 +111,16 @@ public class BaseTest extends BrowserInit{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
+
 	}
-	
+
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 	    if (driver != null) {
 	        driver.quit();
 	    }
 	}
-	
+
 
 
 }

@@ -10,11 +10,11 @@ import pageobjects.ProductCatalogue;
 import testcomponents.BaseTest;
 
 public class SearchIphoneAddtoCartTest extends BaseTest  {
-	
+
 	@Test
 	public void SearchandAddtoCart()
 	{
-		
+
 		HomePage hp=new HomePage(driver);
 		LoginPage login=new LoginPage(driver);
 		ProductCatalogue pc=new ProductCatalogue(driver);

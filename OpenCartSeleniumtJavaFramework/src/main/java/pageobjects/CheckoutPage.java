@@ -31,58 +31,58 @@ public class CheckoutPage extends AbstractComponent {
 
 	@FindBy(css="input#button-payment-address")
 	WebElement BillingDetails;
-	
+
 	@FindBy(xpath="//label[normalize-space()='I want to use an existing address']")
 	WebElement ExistingAddress;
-	
+
 	@FindBy(id="input-payment-firstname")
 	WebElement PaymentFirstName;
-	
+
 	@FindBy(id="input-payment-lastname")
 	WebElement PaymentLastName;
-	
+
 	@FindBy(id="input-payment-address-1")
 	WebElement PaymentAddress;
-	
+
 	@FindBy(id="input-payment-city")
 	WebElement PaymentCity;
-	
+
 	@FindBy(id="input-payment-postcode")
 	WebElement PostCode;
-	
+
 	@FindBy(id="input-payment-country")
 	WebElement PaymentCountry;
-	
+
 	@FindBy(id="input-payment-zone")
 	WebElement PaymentState;
-	
+
 	@FindBy(id="button-shipping-address")
 	WebElement DeliveryDetails;
-	
+
 	@FindBy(css="textarea[name='comment']")
 	WebElement OrderComments;
-	
+
 	@FindBy(xpath="//div[@class='panel-body']/p[3]/textarea")
 	WebElement DeliveryComments;
-	
+
 	@FindBy(id="button-shipping-method")
 	WebElement DeliveryMethod;
-	
+
 	@FindBy(css="a.agree")
 	WebElement TermsandConditions;
-	
+
 	@FindBy(css="button.close")
 	WebElement CloseButton;
-	
+
 	@FindBy(name="agree")
 	WebElement AgreeCheckBox;
-	
+
 	@FindBy(id="button-payment-method")
 	WebElement PaymentMethod;
-	
+
 	@FindBy(id="button-confirm")
 	WebElement ConfirmOrder;
-	
+
 	public void checkoutandplaceorder()
 	{
 		click(BillingDetails);
@@ -102,7 +102,7 @@ public class CheckoutPage extends AbstractComponent {
 		click(ConfirmOrder);
 		sleep();
 	}
-	
+
 	public void BillingDetails()
 	{
 		sendText(PaymentFirstName,pfname);
@@ -115,5 +115,5 @@ public class CheckoutPage extends AbstractComponent {
 		waitForVisibility(PaymentState);
 		selectstatedropdown(PaymentState,pstate);
 	}
-	
+
 }

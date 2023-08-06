@@ -16,32 +16,32 @@ public class AbstractComponent {
 	WebDriver driver;
 	 public WebDriverWait wait;
 	 private static final int TIMEOUT = 15;
-	 
-	
+
+
 	 public AbstractComponent(WebDriver driver)
 	  {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	  }
-	
+
 	 public void waitForVisibility(WebElement element)
 	  {
         wait = new WebDriverWait(driver,Duration.ofSeconds(TIMEOUT));
         wait.until(ExpectedConditions.visibilityOf(element));
 	  }
 
-	 public void click(WebElement element) 
+	 public void click(WebElement element)
  	  {
 		waitForVisibility(element);
         element.click();
 	  }
 
-	 public void sendText(WebElement element, String text) 
+	 public void sendText(WebElement element, String text)
 	  {
 	    waitForVisibility(element);
 	    element.sendKeys(text);
 	  }
-	 
+
 	 public void backspace(WebElement element) {
 			// TODO Auto-generated method stub
 			element.sendKeys(Keys.BACK_SPACE);
@@ -51,36 +51,36 @@ public class AbstractComponent {
         waitForVisibility(element);
         return element.getText();
 	  }
-	 
+
 	 public String selectcountrydropdown(WebElement element,String countryname)
 	 {
 		 Select country=new Select(element);
 		 country.selectByVisibleText(countryname);
 		 return countryname;
-		 
+
 	 }
-	 
+
 	 public String selectstatedropdown(WebElement element,String statename)
 	 {
 		 Select state=new Select(element);
 		 state.selectByVisibleText(statename);
 		 return statename;
-		 
+
 	 }
-	 
+
 	 public String selectcolordropdown(WebElement element,String yellow)
 	 {
 		 Select color=new Select(element);
 		 color.selectByValue(yellow);
 		 return yellow;
-		 
+
 	 }
-	 
-	 public void scrollPage() 
+
+	 public void scrollPage()
 	  {
         ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
       }
-	 
+
 	 public void sleep()
 	 {
 		 try {
@@ -90,7 +90,7 @@ public class AbstractComponent {
 			e.printStackTrace();
 		}
 	 }
-	 
+
 	 public void sleepwith20Seconds()
 	 {
 		 try {
@@ -100,5 +100,5 @@ public class AbstractComponent {
 			e.printStackTrace();
 		}
 	 }
-	
+
 }

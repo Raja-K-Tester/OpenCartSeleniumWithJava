@@ -11,7 +11,7 @@ import pageobjects.ViewUpdateDeleteProductsPage;
 import testcomponents.BaseTest;
 
 public class CompareMP3PlayersBuyTest extends BaseTest	{
-	
+
 	@Test
 	public void compareMp3PlayersPurchase()
 	{

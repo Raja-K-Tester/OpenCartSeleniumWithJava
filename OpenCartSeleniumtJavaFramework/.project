@@ -3,6 +3,7 @@
 	<name>OpenCartSeleniumtJavaFramework</name>
 	<comment></comment>
 	<projects>
+		<project>SeleniumFrameworkDesign</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -17,7 +18,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
 </projectDescription>

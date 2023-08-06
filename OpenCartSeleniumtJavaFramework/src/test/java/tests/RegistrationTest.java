@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
+
 import pageobjects.HomePage;
 import pageobjects.LoginPage;
 import pageobjects.RegistrationPage;
@@ -8,7 +9,7 @@ import resources.RandomGenerator;
 import testcomponents.BaseTest;
 
 public class RegistrationTest extends BaseTest  {
-	
+
 	RandomGenerator rg=new RandomGenerator();
 	String firstname=rg.randomFirstName();
 	String lastname=rg.randomLastName();

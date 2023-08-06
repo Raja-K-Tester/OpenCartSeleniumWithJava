@@ -1,8 +1,13 @@
 package drivers;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.FileInputStream;
+import java.io.IOException;
+//import java.net.URL;
+import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,11 +16,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+//import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.Duration;
-import java.util.Properties;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserInit {
 
@@ -25,11 +28,16 @@ public class BrowserInit {
 
     public WebDriver initializeDriver() throws IOException
 	{
-		// properties class
+
+    	//MutableCapabilities caps=new MutableCapabilities();
+		//driver=new RemoteWebDriver(new URL("https://hub.browserstack.com/wd/hub"), caps);
+    	//driver.get("http://bs-local.com:45454/");
+
+    	// properties class
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\resources\\GlobalData.properties");
 		prop.load(fis);
-		
+
 		String browserName=System.getProperty("browser")!=null ? System.getProperty("browser") :prop.getProperty("browser");
 				//prop.getProperty("browser");
 		boolean isHeadless = Boolean.parseBoolean(prop.getProperty("headless"));
@@ -45,10 +53,10 @@ public class BrowserInit {
 			driver.manage().window().setSize(new Dimension(1440,900));
 			driver.manage().deleteAllCookies();
 		    driver.get(URL);
-		
+
 		}
 		else if (browserName.equalsIgnoreCase("firefox")) {
-			
+
 			WebDriverManager.firefoxdriver().setup();
 			 FirefoxBinary firefoxBinary = new FirefoxBinary();
 			if(isHeadless)
@@ -61,9 +69,9 @@ public class BrowserInit {
 			driver.manage().window().setSize(new Dimension(1440,900));
 			driver.manage().deleteAllCookies();
 		    driver.get(URL);
-	
+
 		} else if (browserName.equalsIgnoreCase("edge")) {
-			
+
 			EdgeOptions options=new EdgeOptions();
 			WebDriverManager.edgedriver().setup();
 			if(isHeadless)
@@ -80,5 +88,5 @@ public class BrowserInit {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		return driver;
 	}
-    
+
 }

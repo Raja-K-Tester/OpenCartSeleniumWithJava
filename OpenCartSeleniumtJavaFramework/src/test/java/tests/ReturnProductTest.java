@@ -8,7 +8,7 @@ import pageobjects.ProductReturnsPage;
 import testcomponents.BaseTest;
 
 public class ReturnProductTest extends BaseTest		{
-	
+
 	@Test
 	public void returnProduct()
 	{
@@ -27,7 +27,7 @@ public class ReturnProductTest extends BaseTest		{
 		reload();
 		SuccessMessage("Account Logout");
 		hp.clickContinue();
-		
+
 	}
 
 }

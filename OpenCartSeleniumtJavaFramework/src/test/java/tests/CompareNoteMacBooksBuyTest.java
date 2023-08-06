@@ -11,7 +11,7 @@ import pageobjects.ViewUpdateDeleteProductsPage;
 import testcomponents.BaseTest;
 
 public class CompareNoteMacBooksBuyTest extends BaseTest	{
-	
+
 	@Test
 	public void compareNoteMacBooksPurchase()
 	{

@@ -8,17 +8,18 @@ import pageobjects.MyAccountPage;
 import pageobjects.ProductCatalogue;
 import pageobjects.WishListPage;
 import testcomponents.BaseTest;
+import testcomponents.Retry;
 
 
 public class WishListTest extends BaseTest 	{
 
-	@Test
+	@Test(retryAnalyzer = Retry.class)
 	public void wishlist()
 	{
 
 	HomePage hp=new HomePage(driver);
 	LoginPage login=new LoginPage(driver);
-	ProductCatalogue pc=new ProductCatalogue(driver); 
+	ProductCatalogue pc=new ProductCatalogue(driver);
 	WishListPage wp=new WishListPage(driver);
 	CheckoutPage cp=new CheckoutPage(driver);
 	MyAccountPage map=new MyAccountPage(driver);
@@ -51,6 +52,6 @@ public class WishListTest extends BaseTest 	{
 	reload();
 	SuccessMessage("Account Logout");
 	hp.clickContinue();
-	
+
 	}
-}	
+}

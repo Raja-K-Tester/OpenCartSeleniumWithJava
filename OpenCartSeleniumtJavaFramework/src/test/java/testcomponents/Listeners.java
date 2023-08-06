@@ -15,7 +15,7 @@ public class Listeners extends BaseTest implements ITestListener {
 
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
-	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>(); 
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 	// make object thread safe.Each object creation
 	// have its own thread if you run
 	// concurrently it interrupt other overrriding variable

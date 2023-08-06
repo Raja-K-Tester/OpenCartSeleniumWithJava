@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\eclipse-workspace\OpenCartSeleniumtJavaFramework\testSuites\RegLogInOut.xml</span>
+                    <span>C:\eclipse-workspace\OpenCartSeleniumtJavaFramework\testSuites\Regression.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="LoginPageTest">LoginPageTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.EndToEndTest" class="method navigator-link" hash-for-method="compare">compare</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.RegistrationTest" class="method navigator-link" hash-for-method="Registration">Registration</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.EndToEndTest" class="method navigator-link" hash-for-method="returnproduct">returnproduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.EndToEndTest" class="method navigator-link" hash-for-method="updatedeletetablet">updatedeletetablet</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.EndToEndTest" class="method navigator-link" hash-for-method="wishlist">wishlist</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,29 +137,35 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTest</span>
+              <span class="class-name">tests.EndToEndTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginPageTest">
-                  </a> <!-- LoginPageTest -->
-                  <span class="method-name">LoginPageTest</span>
+                  <a name="compare">
+                  </a> <!-- compare -->
+                  <span class="method-name">compare</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.RegistrationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Registration">
-                  </a> <!-- Registration -->
-                  <span class="method-name">Registration</span>
+                  <a name="returnproduct">
+                  </a> <!-- returnproduct -->
+                  <span class="method-name">returnproduct</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updatedeletetablet">
+                  </a> <!-- updatedeletetablet -->
+                  <span class="method-name">updatedeletetablet</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="wishlist">
+                  </a> <!-- wishlist -->
+                  <span class="method-name">wishlist</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,7 +173,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\eclipse-workspace\OpenCartSeleniumtJavaFramework\testSuites\RegLogInOut.xml</span>
+            <span class="header-content">C:\eclipse-workspace\OpenCartSeleniumtJavaFramework\testSuites\Regression.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -167,16 +183,11 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;testcomponents.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Registration Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Regression Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.RegistrationTest&quot;/&gt;
+      &lt;class name=&quot;tests.EndToEndTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Registration Test --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Login Test&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;tests.LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;/test&gt; &lt;!-- Regression Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,10 +199,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Registration Test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Login Test (1 class)</span>
+                <span class="test-name">Regression Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -217,20 +225,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Registration')
-data.setCell(0, 2, 'tests.RegistrationTest')
-data.setCell(0, 3, 122240);
+data.setCell(0, 1, 'compare')
+data.setCell(0, 2, 'tests.EndToEndTest')
+data.setCell(0, 3, 146207);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'LoginPageTest')
-data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 29062);
+data.setCell(1, 1, 'wishlist')
+data.setCell(1, 2, 'tests.EndToEndTest')
+data.setCell(1, 3, 121417);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'returnproduct')
+data.setCell(2, 2, 'tests.EndToEndTest')
+data.setCell(2, 3, 61865);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'updatedeletetablet')
+data.setCell(3, 2, 'tests.EndToEndTest')
+data.setCell(3, 3, 12920);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -256,35 +272,54 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.RegistrationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.EndToEndTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Registration</span>
-                <span class="method-start">259984 ms</span>
+                <span class="method-name">compare</span>
+                <span class="method-start">22950 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">382759 ms</span>
+                <span class="method-start">169173 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">426677 ms</span>
+                <span class="method-start">172752 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginPageTest</span>
-                <span class="method-start">480518 ms</span>
+                <span class="method-name">updatedeletetablet</span>
+                <span class="method-start">213432 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">509584 ms</span>
+                <span class="method-start">226356 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">230277 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">returnproduct</span>
+                <span class="method-start">255948 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">317820 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">324649 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">wishlist</span>
+                <span class="method-start">372509 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">493930 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

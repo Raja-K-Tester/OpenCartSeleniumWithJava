@@ -25,7 +25,7 @@ public class IMacAddtoCartTest extends BaseTest  {
 	hp.clickDesktopandMac();
 	pc.addiMac();
 	hp.clickCheckout();
-	//cp.BillingDetails();
+	cp.BillingDetails();
 	cp.checkoutandplaceorder();
 	getScreenshot("IMacTest", driver);
 	SuccessMessage("Your order has been placed!");
@@ -37,7 +37,7 @@ public class IMacAddtoCartTest extends BaseTest  {
 	reload();
 	SuccessMessage("Account Logout");
 	hp.clickContinue();
-	
+
 	}
 
 }

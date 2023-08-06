@@ -2,6 +2,7 @@ package pageobjects;
 
 import java.util.Iterator;
 import java.util.Set;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,8 +16,8 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 	WebDriver driver;
 	HomePage hp=new HomePage(driver);
 	LoginPage lp=new LoginPage(driver);
-	
-	public ViewUpdateDeleteProductsPage(WebDriver driver) 
+
+	public ViewUpdateDeleteProductsPage(WebDriver driver)
 	 {
 		super(driver);
 		this.driver=driver;
@@ -25,49 +26,49 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 
 	@FindBy(xpath="//div[@class='input-group btn-block']/input")
 	WebElement Quantity;
-	
+
 	@FindBy(css="button[data-original-title='Update']")
 	WebElement Update;
-	
+
 	@FindBy(css="button[data-original-title='Remove']")
 	WebElement Remove;
-	
+
 	@FindBy(xpath="//strong[contains(text(),'Nikon D300')]")
 	WebElement NikonD300Product;
-	
+
 	@FindBy(linkText="Reviews (0)" )
 	WebElement Reviews;
-	
+
 	@FindBy(xpath="//ul[@class='thumbnails']/li[1]")
 	WebElement Image;
-	
+
 	@FindBy(css="button[title='Next (Right arrow key)']")
 	WebElement RightArrowKey;
-	
+
 	@FindBy(css="button[title='Close (Esc)']")
 	WebElement Close;
-	
+
 	@FindBy(css="button#button-cart")
 	WebElement AddtoCartButton;
-	
+
 	@FindBy(xpath="//tbody[1]/tr[1]/td[2]/a[1]")
 	WebElement MacBookProductLink;
-	
+
 	@FindBy(xpath="//tbody[1]/tr[1]/td[3]/a[1]")
 	WebElement MacBookAirLink;
-	
+
 	@FindBy(xpath="//tbody[1]/tr[1]/td[4]/a[1]")
 	WebElement MacBookProLink;
-	
+
 	@FindBy(xpath="//tbody[1]/tr[1]/td[5]/a[1]")
 	WebElement SonyVAIOProductLink;
-	
+
 	@FindBy(linkText = "iPod Classic")
 	WebElement iPodClassicLink;
-	
+
 	@FindBy(linkText = "iPod Touch")
 	WebElement iPodTouchLink;
-	
+
 	public void galaxytabupdateremove()
 	{
 		backspace(Quantity);
@@ -100,7 +101,7 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 		click(AddtoCartButton);
 		sleep();
 	}
-	
+
 	public void WindowHandlesForMacNoteBook()
 	{
 		String clickandopentab =Keys.chord(Keys.CONTROL,Keys.ENTER);
@@ -115,7 +116,7 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 		String macpro=it.next();
 		String macair=it.next();
 		String macbook=it.next();
-		
+
 		for(String win : windows) {
 			if(win==parentid)
 			{
@@ -129,13 +130,13 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 		        macandnotebook(driver);
 			}
 		}
-		    
+
 
 		driver.switchTo().window(parentid);
-		
+
 	}
-		
-	public void macandnotebook(WebDriver driver) 
+
+	public void macandnotebook(WebDriver driver)
 	{
 		scrollPage();
 	    sleep();
@@ -153,8 +154,8 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 	    click(AddtoCartButton);
 	    sleep();
 	}
-	
-	public void airandpro(WebDriver driver)  
+
+	public void airandpro(WebDriver driver)
 	{
 		scrollPage();
 	    sleep();
@@ -170,7 +171,7 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 	    click(AddtoCartButton);
 	    sleep();
     }
-	
+
 	public void WindowHandlesForMP3Players()
 	{
 		String clickandopentab =Keys.chord(Keys.CONTROL,Keys.ENTER);
@@ -181,8 +182,8 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 		String parentid=it.next();
 		String ipodtouch=it.next();
 		String ipodclassic=it.next();
-		
-		
+
+
 		for(String win : windows) {
 			if(win==parentid)
 			{
@@ -190,16 +191,16 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 		        iPodTouch();
 		        driver.switchTo().window(ipodclassic);
 		        iPodClassic();
-		        
+
 			}
 		}
-		    
+
 
 		driver.switchTo().window(parentid);
-		
+
 	}
-	
-	public void iPodTouch() 
+
+	public void iPodTouch()
 	{
 		scrollPage();
 	    sleep();
@@ -221,8 +222,8 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 	    click(AddtoCartButton);
 	    sleep();
 	}
-	
-	public void iPodClassic()  
+
+	public void iPodClassic()
 	{
 		scrollPage();
 	    sleep();
@@ -238,7 +239,7 @@ public class ViewUpdateDeleteProductsPage extends AbstractComponent  {
 	    click(AddtoCartButton);
 	    sleep();
     }
-	
+
 	public void removeGiftcertificate()
 	{
 		click(Remove);

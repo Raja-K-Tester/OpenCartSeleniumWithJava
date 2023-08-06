@@ -9,49 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Registration Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">415,717</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Login Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">90,268</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">505,985</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Regression Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">494,908</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Registration Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.RegistrationTest</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1690817361341</td><td rowspan="1">32856</td></tr><tr><th colspan="4">Registration Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.RegistrationTest</td><td><a href="#m1">Registration</a></td><td rowspan="1">1690817238566</td><td rowspan="1">122240</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Login Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m2">LoginPageTest</a></td><td rowspan="1">1690817459100</td><td rowspan="1">29062</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">tests.EndToEndTest</td><td><a href="#m0">compare</a></td><td rowspan="1">1691304811929</td><td rowspan="1">146207</td></tr><tr class="passedeven"><td><a href="#m1">returnproduct</a></td><td rowspan="1">1691305044927</td><td rowspan="1">61865</td></tr><tr class="passedeven"><td><a href="#m2">updatedeletetablet</a></td><td rowspan="1">1691305002411</td><td rowspan="1">12920</td></tr><tr class="passedeven"><td><a href="#m3">wishlist</a></td><td rowspan="1">1691305161488</td><td rowspan="1">121417</td></tr></tbody>
 </table>
-<h2>Registration Test</h2><h3 id="m0">tests.RegistrationTest#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [66e4fa72-85ab-455c-ae03-9bc1886e43c1, quit {}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.0.3, moz:accessibilityChecks: false, moz:buildID: 20230726201356, moz:debuggerAddress: 127.0.0.1:20969, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 14136, moz:profile: C:\Users\dell\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20969/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 66e4fa72-85ab-455c-ae03-9bc1886e43c1
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
-	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
-	at org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:363)
-	at testcomponents.BaseTest.tearDown(BaseTest.java:119)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: driver.version: unknown
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
-	... 39 more
-Caused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:183)
-	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:117)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:148)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.RegistrationTest#Registration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Login Test</h2><h3 id="m2">tests.LoginTest#LoginPageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Test</h2><h3 id="m0">tests.EndToEndTest#compare</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.EndToEndTest#returnproduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.EndToEndTest#updatedeletetablet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.EndToEndTest#wishlist</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -8,45 +8,45 @@ import org.openqa.selenium.support.PageFactory;
 import abstractcomponents.AbstractComponent;
 
 public class ProductReturnsPage extends AbstractComponent {
-	
+
 	WebDriver driver;
 	HomePage hp=new HomePage(driver);
 
-	public ProductReturnsPage(WebDriver driver) 
+	public ProductReturnsPage(WebDriver driver)
 	{
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 	}
-	
-	
+
+
 	@FindBy(id="input-order-id")
 	WebElement OrderID;
-	
+
 	@FindBy(id="input-date-ordered")
 	WebElement OrderDate;
-	
+
 	@FindBy(id="input-product")
 	WebElement ProductName;
-	
+
 	@FindBy(id="input-model")
 	WebElement ProductCode;
-	
+
 	@FindBy(id="input-quantity")
 	WebElement Quantity;
-	
+
 	@FindBy(xpath="//label[normalize-space()='Dead On Arrival']")
 	WebElement ReturnReason;
-	
+
 	@FindBy(xpath="//label[@class='radio-inline']/input[@value='1']")
 	WebElement ProductOpenedorNot;
-	
+
 	@FindBy(id="input-comment")
 	WebElement TextArea;
-	
+
 	@FindBy(css="input.btn.btn-primary")
 	WebElement Submit;
-	
+
 	public void ReturnProduct()
 	{
 		sendText(OrderID, "196");
@@ -66,5 +66,5 @@ public class ProductReturnsPage extends AbstractComponent {
 		click(Submit);
 		sleep();
 	}
-	
+
 }

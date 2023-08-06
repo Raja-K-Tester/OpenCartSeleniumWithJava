@@ -17,52 +17,52 @@ public class ProductCatalogue extends AbstractComponent {
 	Faker randomdata=new Faker();
 	String Name=randomdata.name().fullName();
 	String Email=randomdata.internet().emailAddress();
-	
+
 	public ProductCatalogue(WebDriver driver) {
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(css="button[onclick=\"cart.add('40', '1');\"]")
 	WebElement IphoneAddtoCart;
-	
+
 	@FindBy(css="button[onclick=\"cart.add('41', '1');\"]")
 	WebElement IMacAddtoCart;
-	
+
 	@FindBy(css="button[onclick=\"cart.add('49', '1');\"]")
 	WebElement SamsungTabAddtoCart;
-	
+
 	@FindBy(css="span#cart-total")
 	WebElement CartTotal;
-	
+
 	@FindBy(xpath="//strong[contains(text(),'Cart')]")
 	WebElement ViewCart;
-	
+
 	@FindBy(id="input-to-name")
 	WebElement RecipientName;
-	
+
 	@FindBy(id="input-to-email")
 	WebElement RecipientEmail;
-	
+
 	@FindBy(css="input[value='6']")
 	WebElement GiftCertificateTheme;
-	
+
 	@FindBy(id="input-message")
 	WebElement Message;
-	
+
 	@FindBy(id="input-message")
 	WebElement Amount;
-	
+
 	@FindBy(css="input[name='agree']")
 	WebElement Agree;
-	
+
 	@FindBy(css="input.btn.btn-primary")
 	WebElement ContinueButton;
-	
+
 	@FindBy(xpath="//p[contains(text(),'Thank you for purchasing')]")
 	WebElement text;
-	
+
 	public void addIphone()
 	{
 		click(IphoneAddtoCart);
@@ -71,13 +71,13 @@ public class ProductCatalogue extends AbstractComponent {
 		click(ViewCart);
 
 	}
-	
+
 	public void clickcarttotalandviewcart()
 	{
 		click(CartTotal);
 		click(ViewCart);
 	}
-	
+
 	public void addiMac()
 	{
 		click(IMacAddtoCart);
@@ -85,7 +85,7 @@ public class ProductCatalogue extends AbstractComponent {
 		click(CartTotal);
 		click(ViewCart);
 	}
-	
+
 	public void addSamsungGalaxyTab()
 	{
 		click(SamsungTabAddtoCart);
@@ -93,7 +93,7 @@ public class ProductCatalogue extends AbstractComponent {
 		click(CartTotal);
 		click(ViewCart);
 	}
-	
+
 	public void BuyGiftCertificate()
 	{
 		sendText(RecipientName, Name);
@@ -105,6 +105,6 @@ public class ProductCatalogue extends AbstractComponent {
 		click(Agree);
 		click(ContinueButton);
 		sleep();
-	
+
 	}
 }
